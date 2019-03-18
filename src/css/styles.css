@@ -1,9 +1,142 @@
 * {
-    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-body,
-html {
-    
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    font-family: 'Fira Sans', sans-serif;
 }
 
+.container {
+    width: 620px;
+    margin: auto;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.head {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    background: #ff8663;
+    padding: 16px;
+}
+
+.search {
+    display: flex;
+    background: #f0f0f0;
+    padding: 8px;
+}
+
+.search input {
+    display: block;
+    border: none;
+    outline: none;
+    width: 50%;
+    margin: 0 8px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 300;
+    padding: 3px 8px 3px 28px;
+    border-radius: 13px;
+    background: #ffffff url('../img/search.png') no-repeat left 8px center;
+    /* background: #ffffff; */
+}
+
+.friends {
+    position: relative;
+    display: flex;
+    background: #ffffff;
+}
+
+.friends::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    margin-left: -1px;
+    width: 2px;
+    background: #f0f0f0;
+}
+
+.friends > div {
+    width: 50%;
+    margin: 16px;
+}
+
+.title {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #4f4f4f;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 8px 0;
+}
+
+.list {
+    height: 300px;
+    overflow-y: scroll;
+    user-select: none;
+}
+
+.list .friend {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+.list .friend:hover {
+    background: #f0f0f0;
+}
+
+.list .photo {
+    border-radius: 25px;
+    margin-right: 16px;
+}
+
+.list .name {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.list .add {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    margin-top: -8px;
+    display: block;
+    cursor: pointer;
+}
+
+.fav .list .add {
+    transform: rotate(45deg);
+}
+
+.actions {
+    background: #f0f0f0;
+    padding: 8px;
+    text-align: right;
+}
+
+.save {
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 300;
+    padding: 8px 16px;
+    background: #ff8663;
+    border-radius: 8px;
+    cursor: pointer;
+}

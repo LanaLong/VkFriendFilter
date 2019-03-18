@@ -3,17 +3,34 @@
 
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <title>{{htmlWebpackPlugin.options.title}}</title>
 </head>
 
 <body>
     <div class="container">
-        {{> "./src/templates/empty.hbs"}}
-     
+        <div class="head">Выберите друзей</div>
+        <div class="search">
+            <input type="text" data-source=".all .list" placeholder="Начните вводить имя друга">
+            <input type="text" data-source=".fav .list" placeholder="Начните вводить имя друга">
+        </div>
+        <div class="friends">
+            <div class="all">
+                <div class="title">Ваши друзья</div>
+                <div class="list"></div>
+            </div>
+            <div class="favorites">
+                <div class="title">Друзья в списке</div>
+                <div class="list"></div>
+            </div>
+        </div>
+        <div class="actions">
+            <button class="save">Сохранить</button>
+        </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <script src="https://vk.com/js/api/openapi.js?159" type="text/javascript"></script>
 </body>
 
 </html>
