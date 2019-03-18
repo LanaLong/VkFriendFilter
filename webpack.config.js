@@ -29,7 +29,7 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin('styles.css'),
         new HtmlPlugin({
-            title: 'Geo-response',
+            title: 'VkFriendsFilter',
             template: 'index.hbs',
         }),
         new CleanWebpackPlugin(['dist'])
