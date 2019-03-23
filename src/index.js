@@ -1,5 +1,4 @@
 import './css/styles.css';
-// import { part } from "./js/part";
 
 VK.init({
     apiId: 6904469
@@ -85,9 +84,6 @@ auth()
         const search = document.querySelector('.search');
         const save = document.querySelector('.save');
         const friends = await callAPI('friends.get', { fields: 'photo_50' });
-
-
-        console.log('its work outside');
         
         if (localStorage.all) {
             let allSaved = friends.items.filter(item => localStorage.all.includes(item.id));
@@ -102,7 +98,6 @@ auth()
             makeDnD([listFriendsAll, listFriendsFav]);
 
             document.addEventListener('click', (e) => {
-                console.log('its dont work inside');
                 if (e.target.classList.contains('add')) {
                     if (e.target.closest('.all')) {
                         listFriendsFav.appendChild(e.target.parentNode);
